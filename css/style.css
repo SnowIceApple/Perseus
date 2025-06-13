@@ -1,0 +1,15 @@
+html, body{
+    font-family: "Ubuntu", sans-serif;
+}
+
+html{
+    font-size: 1.756vh;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+:root{
+    --color1-: #7dd5ff;
+}
