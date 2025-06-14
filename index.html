@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,10 +19,108 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollToPlugin.min.js" integrity="sha512-kz526itdNcpyMs18TLPOhsnIeOIO1JywWKbbF77zR+ZKpZ4gwubXhwaURHpt5Se9AAqSK2j8ID0LnfXsB2Jkjg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <body>
     <div id="wrap">
-
+        <header id="header">
+            <div class="header_inner">
+                <h1 class="logo">
+                    <a href="#">
+                        <img src="./img/logo.png" alt="Cyberperseus logo">
+                    </a>
+                </h1>
+                <nav id="nav">
+                    <ul class="nav_floor1">
+                        <li>
+                            <a href="#">SOLUTIONS</a>
+                            <ul class="nav_floor2">
+                                <li><a href="#">SDV</a></li>
+                                <li><a href="#">PEGASUS</a></li>
+                                <li><a href="#">AEGIS</a></li>
+                                <li><a href="#">TACHYON</a></li>
+                                <li><a href="#">GAIA</a></li>
+                                <li><a href="#">AEGIS-LET</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">TECHNOLOGY</a>
+                            <ul class="nav_floor2">
+                                <li><a href="#">Xen ARM</a></li>
+                                <li><a href="#">Hypervisor</a></li>
+                                <li><a href="#">Secure Hypervisor</a></li>
+                                <li><a href="#">Linux Fast Boot</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">SUPPORT</a>
+                            <ul class="nav_floor2">
+                                <li><a href="#">Research</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Newsletter</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">COMPANY</a>
+                            <ul class="nav_floor2">
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">History</a></li>
+                                <li><a href="#">Partners</a></li>
+                                <li><a href="#">Location</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">CAREERS</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header_util">
+                    <div class="lang_select">
+                        <button>
+                            <span>EN</span>
+                            <img src="./img/lang-arr.svg" alt="#">
+                        </button>
+                    </div>
+                    <div class="header_contact_area">
+                        <div class="header_contact_btn">
+                            <a href="#">Contact</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main id="main">
+            <div class="main_inner">
+                <div class="main_swiper_box">
+                    <div class="main_swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="main_slide_img">
+                                    <img src="./img/hero_visual_1.jpg" alt="#">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="main_slide_img">
+                                    <img src="./img/hero_visual_2.jpg" alt="#">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="main_slide_img">
+                                    <img src="./img/hero_visual_3.jpg" alt="#">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main_pagi_area">
+                        <div class="main_page_box">
+                            <h3>For connected cars</h3>
+                            <div class="main-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
     </div>
 </body>
 </html>
