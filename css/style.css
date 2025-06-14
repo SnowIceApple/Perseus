@@ -310,6 +310,18 @@ section{
     box-shadow: 25px 30px #fff;
 }
 
+.main_page_box::after{
+    display: block;
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+    width: 85px;
+    height: 70px;
+    border-bottom-right-radius: 50%;
+    box-shadow: 25px 30px #fff;
+}
+
 .main_pagi_area h3{
     font-size: 1.257vw;
     font-weight: 500;
