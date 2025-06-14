@@ -90,7 +90,7 @@
                 </div>
             </div>
         </header>
-        <div class="contact_area">
+        <div class="contact_area modal">
             <div class="contact_box">
                 <div class="contact_area_top">
                     <span>Contact</span>
@@ -98,50 +98,52 @@
                     <p>Contact us to discuss partnerships, licensing or to learn more
     about our technology.</p>
                 </div>
-                    <div class="contact_input_box">
+                <div class="contact_input_box">
+                    <form method="get" id="contactForm">
                         <ul>
                             <li>
-                                <form method="get" id="name_input" class="contact_input">
-                                    <div class="contact_form_inner">
-                                        <legend>Name</legend>
-                                        <div class="contact_input_list">
-                                            <label for="LastName">
-                                                <span class="hidden_text">focus last name input field</span>
-                                            </label>
-                                            <input type="text" name="LastName" id="LastName" placeholder="Last Name">
-                                            <input type="text" name="firstName" id="firstName" placeholder="First Name">
-                                        </div>
+                                <div class="contact_form_inner">
+                                    <legend>Name</legend>
+                                    <div class="contact_input_list">
+                                        <label for="LastName">
+                                            <span class="hidden_text">focus last name input field</span>
+                                        </label>
+                                        <input type="text" name="LastName" id="LastName" placeholder="Last Name">
+                                        <input type="text" name="FirstName" id="FirstName" placeholder="First Name">
                                     </div>
-                                </form>
+                                </div>
                             </li>
                             <li>
-                                <form method="get" id="name_input" class="contact_input">
-                                    <div class="contact_form_inner">
-                                        <legend>Company</legend>
-                                        <div class="contact_input_list">
-                                            <label for="Company">
-                                                <span class="hidden_text">focus company input field</span>
-                                            </label>
-                                            <input type="text" name="Company" id="Company" placeholder="Company">
-                                        </div>
+                                <div class="contact_form_inner">
+                                    <legend>Company</legend>
+                                    <div class="contact_input_list">
+                                        <label for="Company">
+                                            <span class="hidden_text">focus company input field</span>
+                                        </label>
+                                        <input type="text" name="Company" id="Company" placeholder="Company">
                                     </div>
-                                </form>
+                                </div>
                             </li>
                             <li>
-                                <form method="get" id="name_input" class="contact_input">
-                                    <div class="contact_form_inner">
-                                        <legend>E-mail</legend>
-                                        <div class="contact_input_list">
-                                            <label for="Email">
-                                                <span class="hidden_text">focus email input field</span>
-                                            </label>
-                                            <input type="email" name="Email" id="Email" placeholder="E-mail">
-                                        </div>
+                                <div class="contact_form_inner">
+                                    <legend>E-mail</legend>
+                                    <div class="contact_input_list">
+                                        <label for="Email">
+                                            <span class="hidden_text">focus email input field</span>
+                                        </label>
+                                        <input type="email" name="Email" id="Email" placeholder="E-mail">
                                     </div>
-                                </form>
+                                </div>
                             </li>
                         </ul>
-                    </div>
+                        <div class="contact_confirm">
+                            <button type="submit" form="contactForm">
+                                <span>Next</span>
+                                <img src="./img/icon_more_1.svg" alt="#">
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
         <main id="main">

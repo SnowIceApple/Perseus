@@ -240,22 +240,34 @@ section{
     position: fixed;
     right: 0;
     top: 0;
+    transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    opacity: 0;
+    visibility: hidden;
     width: 43.114vw;
     height: 100%;
     background: #fff;
     z-index: 20;
     font-family: 'Pretendard', sans-serif;
     border-top-left-radius: 40px;
+    padding: 5.689vw 6.287vw 6.287vw 6.287vw;
+    transition: all .5s ease;
+}
+
+.contact_area.active{
+    visibility: visible;
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    opacity: 1;
 }
 
 .contact_box{
-    position: relative;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     width: 100%;
     height: 100%;
-    padding: 5.689vw 6.287vw 0 6.287vw;
+    overflow: auto;
 }
 
 .contact_area *{
@@ -309,20 +321,20 @@ section{
     position: relative;
 }
 
-.contact_input label{
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 100%; 
-    height: 1.257vw;
-}
-
-.contact_input legend{
+.contact_form_inner legend{
     display: block;
     width: 100%;
     font-size: 1.257vw;
     font-weight: 500;
     margin-bottom: 0.898vw;
+}
+
+.contact_input_list label{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%; 
+    height: 1.257vw;
 }
 
 .contact_input_list{
@@ -352,6 +364,31 @@ section{
 
 .contact_input_list input:focus{
     outline: none;
+}
+
+.contact_confirm{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.contact_confirm button{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 4.491vw;
+    background-color: #4cb7e9;
+    padding: 0 6.287vw;
+    font-size: 1.437vw;
+    font-weight: 600;
+    color: #fff;
+    font-family: 'Pretendard', sans-serif;
+}
+
+.confirmed .contact_confirm button{
+    background-color: #011033;
 }
 
 /* main */
@@ -470,6 +507,7 @@ section{
     margin: 0 !important;
     opacity: 1;
     border-radius: 0;
+    transition: all 0s;
 }
 
 .main-pagination .swiper-pagination-bullet-active{
@@ -487,5 +525,14 @@ section{
     top: 0;
     width: 100%;
     height: 100%;
-    user-select: none;
+    background: rgba(0, 0, 0, 0.3);
+    visibility: hidden;
+    opacity: 0;
+    transition: all .5s ease;
+    z-index: 10;
+}
+
+.modal_background.active{
+    visibility: visible;
+    opacity: 1;
 }
