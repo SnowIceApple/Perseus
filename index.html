@@ -83,13 +83,67 @@
                         </button>
                     </div>
                     <div class="header_contact_area">
-                        <div class="header_contact_btn">
+                        <div class="header_contact_btn modal_open_btn">
                             <a href="#">Contact</a>
                         </div>
                     </div>
                 </div>
             </div>
         </header>
+        <div class="contact_area">
+            <div class="contact_box">
+                <div class="contact_area_top">
+                    <span>Contact</span>
+                    <h2>Contact Us</h2>
+                    <p>Contact us to discuss partnerships, licensing or to learn more
+    about our technology.</p>
+                </div>
+                    <div class="contact_input_box">
+                        <ul>
+                            <li>
+                                <form method="get" id="name_input" class="contact_input">
+                                    <div class="contact_form_inner">
+                                        <legend>Name</legend>
+                                        <div class="contact_input_list">
+                                            <label for="LastName">
+                                                <span class="hidden_text">focus last name input field</span>
+                                            </label>
+                                            <input type="text" name="LastName" id="LastName" placeholder="Last Name">
+                                            <input type="text" name="firstName" id="firstName" placeholder="First Name">
+                                        </div>
+                                    </div>
+                                </form>
+                            </li>
+                            <li>
+                                <form method="get" id="name_input" class="contact_input">
+                                    <div class="contact_form_inner">
+                                        <legend>Company</legend>
+                                        <div class="contact_input_list">
+                                            <label for="Company">
+                                                <span class="hidden_text">focus company input field</span>
+                                            </label>
+                                            <input type="text" name="Company" id="Company" placeholder="Company">
+                                        </div>
+                                    </div>
+                                </form>
+                            </li>
+                            <li>
+                                <form method="get" id="name_input" class="contact_input">
+                                    <div class="contact_form_inner">
+                                        <legend>E-mail</legend>
+                                        <div class="contact_input_list">
+                                            <label for="Email">
+                                                <span class="hidden_text">focus email input field</span>
+                                            </label>
+                                            <input type="email" name="Email" id="Email" placeholder="E-mail">
+                                        </div>
+                                    </div>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+            </div>
+        </div>
         <main id="main">
             <div class="main_inner">
                 <div class="main_swiper_box">
@@ -122,5 +176,6 @@
             </div>
         </main>
     </div>
+    <div class="modal_background"></div>
 </body>
 </html>
