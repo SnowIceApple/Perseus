@@ -140,7 +140,18 @@ section{
 }
 
 .nav_floor2 > li{
+    position: relative;
     text-align: center;
+    opacity: 0;
+    transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    transition: transform .3s ease, opacity .3s ease;
+}
+
+#header.active .nav_floor2 > li{
+    opacity: 1;
+    transform: scale(1);
+    -webkit-transform: scale(1);
 }
 
 .nav_floor2 > li > a{
@@ -152,17 +163,8 @@ section{
     font-family: 'Pretendard', sans-serif;
     font-weight: 300;
     padding: 0.599vw 0;
-    opacity: 0;
-    transform: scale(0.8);
-    -webkit-transform: scale(0.8);
-    transition: transform .3s ease, opacity .3s ease;
 }
 
-#header.active .nav_floor2 > li > a{
-    opacity: 1;
-    transform: scale(1);
-    -webkit-transform: scale(1);
-}
 
 .nav_floor2 > li:hover > a{
     font-weight: 500;
