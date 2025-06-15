@@ -9,7 +9,13 @@ $(document).ready(function(){
     });
 
     $('.lang_select button').on('click', function(){
-        $('.lang_select').toggleClass('active');
+        $('.lang_link').toggleClass('active');
+        if($('.lang_link').hasClass('active')){
+            $('.lang_link').stop().slideDown(200);
+        }
+        else{
+            $('.lang_link').stop().slideUp(200);
+        }
     });
 
     $('.header_contact_btn a').on('click', function(e){
@@ -32,6 +38,7 @@ $(document).ready(function(){
 $('.contact_input_box input').each(function(){
 
     $(this).on('propertychange change keyup paste input', function(){
+
         var LastName = $('#LastName').val().length;
         var FirstName = $('#FirstName').val().length;
         var Company = $('#Company').val().length;
@@ -46,6 +53,31 @@ $('.contact_input_box input').each(function(){
     });
 });
 
+$('.contact_confirm button').on('click', function(e){
+    e.preventDefault();
+
+    var LastName = $('#LastName').val().length;
+    var FirstName = $('#FirstName').val().length;
+    var Company = $('#Company').val().length;
+    var Email = $('#Email').val().length;
+
+    if(LastName == 0){
+        alert('Please enter your last name.');
+        $('#LastName').focus();
+    }
+    if(LastName >= 1 && FirstName == 0){
+        alert('Please enter your first name.');
+        $('#FirstName').focus();
+    }
+    if(LastName >= 1 && FirstName >= 1 && Company == 0){
+        alert('Please enter your Company.');
+        $('#Company').focus();
+    }
+    if(LastName >= 1 && FirstName >= 1 && Company >=1 && Email == 0){
+        alert('Please enter your Email address.');
+        $('#Email').focus();
+    }
+});
 
 
     var pagiArray = ['Efficiency', 'Security', 'Performance'];

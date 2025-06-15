@@ -42,7 +42,6 @@ section{
     z-index: 100;
     padding: 0 6.587vw;
     height: 5.689vw;
-    overflow: hidden;
     background: #fff;
     transform-origin: top;
     transition: all .4s ease;
@@ -132,6 +131,12 @@ section{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    visibility: hidden;
+    transition: all .4s ease;
+}
+
+#header.active .nav_floor2{
+    visibility: visible;
 }
 
 .nav_floor2 > li{
@@ -175,7 +180,6 @@ section{
     border-radius: 50%;
     background: var(--color1-);
 }
-
 
 .nav_floor2 > li:hover > a::after{
     display: block;
@@ -222,6 +226,59 @@ section{
     width: 0.5vw;
 }
 
+.lang_link{
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    background: #fff;
+    padding: 0.299vw 0.599vw;
+    margin-top: 0.659vw;
+    border-radius: 10px;
+    box-shadow: 0px 5px 11px rgba(0, 0, 0, 0.11);
+}
+
+.lang_link ul{
+    display: flex;
+    flex-direction: column;
+}
+
+.lang_link ul li{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.lang_link ul li:first-child::after{
+    display: block;
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    width: 27%;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.lang_link ul li a{
+    display: block;
+    padding: 0.599vw 1.317vw;
+    font-size: 1.078vw;
+    color: #000;
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+.lang_link ul li.active a{
+    color: rgba(0, 0, 0, 0.4);
+}
+
 .header_contact_btn a{
     display: flex;
     flex-wrap: wrap;
@@ -251,7 +308,7 @@ section{
     font-family: 'Pretendard', sans-serif;
     border-top-left-radius: 40px;
     padding: 5.689vw 6.287vw 6.287vw 6.287vw;
-    transition: all .5s ease;
+    transition: all .4s ease;
 }
 
 .contact_area.active{
@@ -528,7 +585,7 @@ section{
     background: rgba(0, 0, 0, 0.3);
     visibility: hidden;
     opacity: 0;
-    transition: all .5s ease;
+    transition: all .4s ease;
     z-index: 10;
 }
 
