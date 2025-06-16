@@ -34,7 +34,6 @@ $(document).ready(function(){
         }
     });
 
-
 $('.contact_input_box input').each(function(){
 
     $(this).on('propertychange change keyup paste input', function(){
@@ -79,6 +78,19 @@ $('.contact_confirm button').on('click', function(e){
     }
 });
 
+    function mainTxtToSplitTxt(){
+        var mainTxt = document.querySelectorAll('.main_slide_content h2')
+        var mainSplitTxt = new SplitType(mainTxt, { types: 'chars' });
+
+        gsap.from(mainSplitTxt.chars, {
+            delay: 0.5,
+            opacity: 0,
+            y: 60,
+            duration: 0.7,
+            stagger: { amount: 0.3},
+        });
+    }
+
 
     var pagiArray = ['Efficiency', 'Security', 'Performance'];
 
@@ -86,8 +98,12 @@ $('.contact_confirm button').on('click', function(e){
 
         direction: 'horizontal',
         effect: 'fade',
+        crossFade : true,
         loop: true,
-        speed: 1200,
+        speed: 1500,
+        autoplay: {
+            delay: 4000,
+        },
 
         pagination: {
             el: '.main-pagination',
@@ -97,5 +113,9 @@ $('.contact_confirm button').on('click', function(e){
             },
         },
 
+    });
+
+    swiper1.on('slideChange', function(){
+        mainTxtToSplitTxt();
     });
 });
