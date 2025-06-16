@@ -126,6 +126,12 @@ $('.contact_confirm button').on('click', function(e){
         duration: 1.5,
     });
 
+    tl1.from('.carSoftware_slideArea', {
+        delay: -6,
+        opacity: 0,
+        duration: 3,
+    });
+
     window.addEventListener("resize", ScrollTrigger.update);
 
 
@@ -164,6 +170,8 @@ $('.contact_confirm button').on('click', function(e){
         autoplay: {
             delay: 2000,
         },
+        observer: true,
+        observerParent: true,
         pagination: {
             el: '.carSoftware_pagination',
             clickable: true,
