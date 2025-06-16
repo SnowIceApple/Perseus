@@ -128,7 +128,7 @@ $('.contact_confirm button').on('click', function(e){
     });
 
     tl1.from('.carSoftware_slideArea', {
-        delay: -7,
+        delay: -8,
         opacity: 0,
         duration: 3,
     });
