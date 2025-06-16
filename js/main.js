@@ -164,6 +164,14 @@ $('.contact_confirm button').on('click', function(e){
         autoplay: {
             delay: 2000,
         },
+        pagination: {
+            el: '.carSoftware_pagination',
+            clickable: true,
+        },
         disableOnInteraction: false,
+    });
+
+    swiper2.on('slideChange', function(){
+        $('.carSoftware_SlideTit ul li').eq(this.realIndex).addClass('active').siblings().removeClass('active');
     });
 });

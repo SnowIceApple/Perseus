@@ -842,11 +842,13 @@ section{
 }
 
 .carSoftware_SlideBox{
+    width: 20.136vw;
     position: relative;
     z-index: 5;
 }
 
 .carSoftware_Slide{
+    position: relative;
     width: 20.136vw;
     height: 20.136vw;
     overflow: hidden;
@@ -862,8 +864,8 @@ section{
     width: 45%;
 }
 
-.carSoftware_SlideBox::before,
-.carSoftware_SlideBox::after{
+.carSoftware_Slide::before,
+.carSoftware_Slide::after{
     display: block;
     content: "";
     position: absolute;
@@ -875,12 +877,12 @@ section{
     border: 2px solid #fff;
 }
 
-.carSoftware_SlideBox::before{
+.carSoftware_Slide::before{
     left: 0;
     border-right: 0;
 }
 
-.carSoftware_SlideBox::after{
+.carSoftware_Slide::after{
     right: 0;
     border-left: 0;
 }
@@ -892,7 +894,7 @@ section{
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
     width: 14.906vw;
-    height: 100%;
+    height: 20.136vw;
     border: 2px solid #fff;
     box-sizing: border-box;
     border-radius: 5px;
@@ -915,6 +917,50 @@ section{
     -webkit-filter: blur(15px);
 }
 
+.carSoftware_SlideControl{
+    width: 100%;
+    padding: 1.308vw 0 1.7vw 0;
+}
+
+.carSoftware_SlideTit{
+    position: relative;
+    height: 1.617vw;
+}
+
+.carSoftware_SlideTit ul{
+    width: 100%;
+}
+
+.carSoftware_SlideTit ul li{
+    font-size: 1.617vw;
+    font-weight: 600;
+    color: var(--color1-);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+.carSoftware_SlideTit ul li.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.carSoftware_pagination{
+    position: absolute;
+    left: 50% !important;
+    top: 100% !important;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+}
+
+.carSoftware_pagination .swiper-pagination-bullet{
+    background: #fff !important;
+}
 
 /* solutions */
 
