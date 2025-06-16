@@ -172,7 +172,7 @@ $('.contact_confirm button').on('click', function(e){
             delay: 2000,
         },
         observer: true,
-        observerParent: true,
+        observeParents: true,
         pagination: {
             el: '.carSoftware_pagination',
             clickable: true,
