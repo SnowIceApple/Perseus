@@ -111,7 +111,6 @@ $('.contact_confirm button').on('click', function(e){
             scrub: true,
             start: 'top top',
             end: '150% top top',
-            markers: true,
             toggleActions: "play reverse none reverse",
         }
     });
