@@ -26,10 +26,12 @@ body{
 
 section{
     width: 100%;
+    padding: 6.587vw 5.988vw;
 }
 
 .section_inner{
-    padding: 6.587vw 5.988vw;
+    width: 100%;
+    height: 100%;
 }
 /* 
 .container.type1{
@@ -612,7 +614,7 @@ section{
     font-weight: 400;
 }
 
-.main_slide_content a{
+.btn_type1{
     display: flex;
     gap: 0 0.599vw;
     width: max-content;
@@ -629,14 +631,14 @@ section{
     background-size: 1.677vw auto;
 }
 
-.main_slide_content a:hover{
+.btn_type1:hover{
     background: #fff url('../img/icon_more_1_b.svg') no-repeat;
     border-color: #fff;
     color: #000;
     background-position: right 0.7vw center;
 }
 
-.main_slide_content a span{
+.btn_type1 span{
     display: flex;
     align-items: center;
 }
@@ -748,6 +750,176 @@ section{
 .partners_list ul li:hover img{
     transform: scale(1.12);
     -webkit-transform: scale(1.12);
+}
+
+/* car software */
+
+#carSoftware{
+    height: 100vh;
+    background: linear-gradient(to bottom, #0e0e0e 55%, #143278);
+    overflow: hidden;
+}
+
+#carSoftware .section_inner{
+    position: relative;
+}
+
+.carSoftware_tit{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    width: 32%;
+}
+
+.carSoftware_tit span{
+    font-size: 1.084vw;
+    opacity: 0.7;
+    font-family: "Pretendard", sans-serif;
+    font-weight: 300;
+}
+
+.carSoftware_tit h2{
+    font-size: 2.108vw;
+    font-family: "Pretendard", sans-serif;
+    font-weight: 500;
+    line-height: 1.22;
+    margin: 0.602vw 0 1.325vw 0;
+}
+
+.car_area{
+    position: absolute;
+    left: 50%;
+    top: -150%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+}
+
+.car_box{
+    position: relative;
+}
+
+.car_img{
+    width: 26vw;
+}
+
+.car_img img{
+    width: 100%;
+}
+
+.car_headLight{
+    position: absolute;
+    left: 50%;
+    top: 53%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    z-index: 2;
+    width: 26vw;
+}
+
+.car_waveEffect{
+    position: absolute;
+    left: 50%;
+    top: 76%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    width: 26vw;
+}
+
+.carSoftware_slideArea{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.carSoftware_SlideBox{
+    position: relative;
+    z-index: 5;
+}
+
+.carSoftware_Slide{
+    width: 20.136vw;
+    height: 20.136vw;
+    overflow: hidden;
+}
+
+.carSoftware_Slide .swiper-slide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carSoftware_Slide .swiper-slide img{
+    width: 45%;
+}
+
+.carSoftware_SlideBox::before,
+.carSoftware_SlideBox::after{
+    display: block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2.092vw;
+    height: 14.906vw;
+    border-radius: 5px;
+    border: 2px solid #fff;
+}
+
+.carSoftware_SlideBox::before{
+    left: 0;
+    border-right: 0;
+}
+
+.carSoftware_SlideBox::after{
+    right: 0;
+    border-left: 0;
+}
+
+.carSoftware_Deco{
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    width: 14.906vw;
+    height: 100%;
+    border: 2px solid #fff;
+    box-sizing: border-box;
+    border-radius: 5px;
+    overflow: hidden;
+    background: linear-gradient(to top, #0e0e0e -6%, rgba(30, 55, 110, 1));
+}
+
+.carSoftware_Deco::before{
+    display: block;
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 14.5vw;
+    height: 14.5vw;
+    background: rgba(30, 55, 110, 0.4);
+    border-radius: 50%;
+    filter: blur(15px);
+    -webkit-filter: blur(15px);
+}
+
+
+/* solutions */
+
+#solutions{
+    height: 100vh;
 }
 
 .modal_background{

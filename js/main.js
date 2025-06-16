@@ -91,6 +91,43 @@ $('.contact_confirm button').on('click', function(e){
         });
     }
 
+    gsap.from('.partners_list ul li', {
+        duration: 0.5, 
+        y: 30, 
+        opacity: 0, 
+        stagger: {
+            amount: 0.3,
+        },
+        scrollTrigger: {
+            trigger: '.partners_list',
+            start: 'center bottom',
+        }
+    });
+
+    let tl1 = gsap.timeline({
+        scrollTrigger: {
+            trigger: '#carSoftware',
+            pin: true,
+            scrub: true,
+            start: 'top top',
+            toggleActions: "play reverse none reverse",
+        }
+    });
+
+    tl1.to('.car_area', {
+        yPercent: 45,
+        duration: 7,
+    });
+
+    tl1.from('.carSoftware_tit', {
+        delay: -7,
+        y: 40,
+        opacity: 0,
+        duration: 1.5,
+    });
+
+    window.addEventListener("resize", ScrollTrigger.update);
+
 
     var pagiArray = ['Efficiency', 'Security', 'Performance'];
 
@@ -117,5 +154,16 @@ $('.contact_confirm button').on('click', function(e){
 
     swiper1.on('slideChange', function(){
         mainTxtToSplitTxt();
+    });
+
+    const swiper2 = new Swiper('.carSoftware_Slide', {
+        direction: 'horizontal',
+        speed: 500,
+        loop: true,
+        slidesPerView: 1,
+        autoplay: {
+            delay: 2000,
+        },
+        disableOnInteraction: false,
     });
 });

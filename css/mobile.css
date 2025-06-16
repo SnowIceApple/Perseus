@@ -1,0 +1,11 @@
+@media screen and(min-width: 1800px){
+    .car_area{
+        top: -150%;
+    }
+}
+
+@media screen and (max-width: 1680px){
+    .car_area{
+        top: -115%;
+    }
+}
