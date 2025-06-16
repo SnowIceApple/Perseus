@@ -107,27 +107,29 @@ $('.contact_confirm button').on('click', function(e){
     let tl1 = gsap.timeline({
         scrollTrigger: {
             trigger: '#carSoftware',
-            pin: true,
+            pin: '#carSoftware',
             scrub: true,
             start: 'top top',
+            end: '150% top top',
+            markers: true,
             toggleActions: "play reverse none reverse",
         }
     });
 
     tl1.to('.car_area', {
         yPercent: 45,
-        duration: 7,
+        duration: 10,
     });
 
     tl1.from('.carSoftware_tit', {
-        delay: -7,
+        delay: -10,
         y: 40,
         opacity: 0,
         duration: 1.5,
     });
 
     tl1.from('.carSoftware_slideArea', {
-        delay: -6,
+        delay: -7,
         opacity: 0,
         duration: 3,
     });
