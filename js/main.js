@@ -91,6 +91,33 @@ $('.contact_confirm button').on('click', function(e){
         });
     }
 
+    var pagiArray = ['Efficiency', 'Security', 'Performance'];
+
+    const swiper1 = new Swiper('.main_swiper', {
+
+        direction: 'horizontal',
+        effect: 'fade',
+        crossFade : true,
+        loop: true,
+        speed: 1500,
+        autoplay: {
+            delay: 4000,
+        },
+
+        pagination: {
+            el: '.main-pagination',
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<a href="#" class="' + className + '">' + (pagiArray[index]) + '</a>';
+            },
+        },
+
+    });
+
+    swiper1.on('slideChange', function(){
+        mainTxtToSplitTxt();
+    });
+
     gsap.from('.partners_list ul li', {
         duration: 0.5, 
         y: 30, 
@@ -133,36 +160,6 @@ $('.contact_confirm button').on('click', function(e){
         duration: 3,
     });
 
-    window.addEventListener("resize", ScrollTrigger.update);
-
-
-    var pagiArray = ['Efficiency', 'Security', 'Performance'];
-
-    const swiper1 = new Swiper('.main_swiper', {
-
-        direction: 'horizontal',
-        effect: 'fade',
-        crossFade : true,
-        loop: true,
-        speed: 1500,
-        autoplay: {
-            delay: 4000,
-        },
-
-        pagination: {
-            el: '.main-pagination',
-            clickable: true,
-            renderBullet: function (index, className) {
-                return '<a href="#" class="' + className + '">' + (pagiArray[index]) + '</a>';
-            },
-        },
-
-    });
-
-    swiper1.on('slideChange', function(){
-        mainTxtToSplitTxt();
-    });
-
     const swiper2 = new Swiper('.carSoftware_Slide', {
         direction: 'horizontal',
         speed: 500,
@@ -183,4 +180,7 @@ $('.contact_confirm button').on('click', function(e){
     swiper2.on('slideChange', function(){
         $('.carSoftware_SlideTit ul li').eq(this.realIndex).addClass('active').siblings().removeClass('active');
     });
+
+    window.addEventListener("resize", ScrollTrigger.update);
+
 });
