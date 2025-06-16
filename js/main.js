@@ -79,7 +79,7 @@ $('.contact_confirm button').on('click', function(e){
 });
 
     function mainTxtToSplitTxt(){
-        var mainTxt = document.querySelectorAll('.main_slide_content h2')
+        var mainTxt = document.querySelectorAll('.main_slide_content h2');
         var mainSplitTxt = new SplitType(mainTxt, { types: 'chars' });
 
         gsap.from(mainSplitTxt.chars, {
