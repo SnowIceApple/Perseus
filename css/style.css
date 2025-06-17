@@ -896,7 +896,6 @@ section{
     transform: rotate(0deg);
     pointer-events: none;
     user-select: none;
-    z-index: 10;
 }
 
 .csw_arrow.top{
@@ -905,6 +904,7 @@ section{
     top: 7px;
     transform: translateX(-50%) rotate(180deg);
     -webkit-transform: translateX(-50%) rotate(180deg);
+    z-index: 10;
 }
 
 .csw_arrow.bot{
@@ -912,6 +912,7 @@ section{
     bottom: 7px;
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
+    z-index: 10;
 }
 
 .csw_arrow.left{
