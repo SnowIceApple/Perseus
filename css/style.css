@@ -833,12 +833,51 @@ section{
 .carSoftware_slideArea{
     position: absolute;
     right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
+    top: 40%;
     width: 50%;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
+}
+
+.car_pointer{
+    position: relative;
+    width: calc(100% - 20.136vw);
+}
+
+.pointerLine{
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, #fff 10%, #4bb6e9);
+    mask-image: repeating-linear-gradient(90deg, #ffffff, #ffffff 4px, transparent 4px, transparent 7px), repeating-linear-gradient(180deg, #ffffff, #ffffff 4px, transparent 4px, transparent 7px), repeating-linear-gradient(90deg, #ffffff, #ffffff 4px, transparent 4px, transparent 7px), repeating-linear-gradient(180deg, #ffffff, #ffffff 4px, transparent 4px, transparent 7px);
+    mask-position: left top, right top, left bottom, left top;
+    mask-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
+    mask-size: 100% 3px, 3px 100%, 100% 3px, 3px 100%;
+}
+
+.pointerTip{
+    position: absolute;
+    right: calc(100% - (2.53vw / 2));
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.13vw;
+    height: 2.13vw;
+    border: 3px solid #4bb6e9;
+    border-radius: 0.482vw;
+    box-sizing: border-box;
+    background: rgba(75, 182, 233, 0.2);
+}
+
+.pointerCircle{
+    width: 40%;
+    height: 40%;
+    border-radius: 50%;
+    background: #fff;
 }
 
 .carSoftware_SlideBox{
@@ -847,11 +886,54 @@ section{
     z-index: 5;
 }
 
+.csw_arrow{
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 0 0.602vw 0.723vw 0.602vw;
+    border-color: transparent transparent #4bb6e9 transparent;
+    transform: rotate(0deg);
+    pointer-events: none;
+    user-select: none;
+    z-index: 10;
+}
+
+.csw_arrow.top{
+    left: 50%;
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+    transform: translateX(-50%) rotate(180deg);
+    -webkit-transform: translateX(-50%) rotate(180deg);
+}
+
+.csw_arrow.bot{
+    left: 50%;
+    bottom: 7px;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+}
+
+.csw_arrow.left{
+    top: 50%;
+    left: 2px;
+    transform: translateY(-50%) rotate(90deg);
+    -webkit-transform: translateY(-50%) rotate(90deg);
+}
+
+.csw_arrow.right{
+    top: 50%;
+    right: 2px;
+    transform: translateY(-50%) rotate(-90deg);
+    -webkit-transform: translateY(-50%) rotate(-90deg);
+}
+
 .carSoftware_Slide{
     position: relative;
     width: 20.136vw;
     height: 20.136vw;
     overflow: hidden;
+    z-index: 2;
 }
 
 .carSoftware_Slide .swiper-slide{
@@ -880,11 +962,13 @@ section{
 .carSoftware_Slide::before{
     left: 0;
     border-right: 0;
+    background: linear-gradient(87deg, rgba(30, 55, 110, 0.6), transparent);
 }
 
 .carSoftware_Slide::after{
     right: 0;
     border-left: 0;
+    background: linear-gradient(-87deg, rgba(30, 55, 110, 0.6), transparent);
 }
 
 .carSoftware_Deco{
@@ -918,6 +1002,9 @@ section{
 }
 
 .carSoftware_SlideControl{
+    position: absolute;
+    left: 0;
+    top: 100%;
     width: 100%;
     padding: 1.308vw 0 1.7vw 0;
 }
