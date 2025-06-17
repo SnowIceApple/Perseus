@@ -934,7 +934,6 @@ section{
     width: 20.136vw;
     height: 20.136vw;
     overflow: hidden;
-    z-index: 2;
 }
 
 .carSoftware_Slide .swiper-slide{
@@ -944,6 +943,8 @@ section{
 }
 
 .carSoftware_Slide .swiper-slide img{
+    position: relative;
+    z-index: 3;
     width: 45%;
 }
 
@@ -958,6 +959,7 @@ section{
     height: 14.906vw;
     border-radius: 5px;
     border: 2px solid #fff;
+    z-index: -1;
 }
 
 .carSoftware_Slide::before{
