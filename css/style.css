@@ -343,10 +343,10 @@ section{
     flex-direction: column;
 }
 
-.contact_area_top span{
+.main_cate{
     display: block;
     margin-bottom: 0.719vw;
-    color: #3a3a3a;
+    color: #1a1a1a;
     font-family: 'Ubuntu', sans-serif;
 }
 
@@ -1055,7 +1055,49 @@ section{
 /* solutions */
 
 #solutions{
-    height: 100vh;
+}
+
+.section_divider.type1{
+    display: flex;
+    justify-content: space-between;
+}
+
+.solutions_youtubeBox{
+    width: 61.446vw;
+    aspect-ratio: 16 / 9;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.solutions_youtubeBox iframe,
+.solutions_youtubeBox object,
+.solutions_youtubeBox embed{
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.solutions_desc{
+    width: 19.88vw;
+    display: flex;
+    flex-direction: column;
+    padding-top: 3.614vw;
+}
+
+.sec_tit{
+    font-size: 2.41vw;
+    font-family: "Pretendard", sans-serif;
+    font-weight: 600;
+    word-break: keep-all;
+    line-height: 1.24;
+}
+
+.sec_desc{
+    font-size: 1.084vw;
+    font-family: "Pretendard", sans-serif;
+    font-weight: 300;
+    color: #1a1a1a;
+    line-height: 1.15;
+    margin-top: 1.205vw;
 }
 
 .modal_background{
