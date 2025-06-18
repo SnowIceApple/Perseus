@@ -348,6 +348,7 @@ section{
     margin-bottom: 0.719vw;
     color: #1a1a1a;
     font-family: 'Ubuntu', sans-serif;
+    font-size: 1.084vw;
 }
 
 .contact_area_top h2{
@@ -1189,6 +1190,7 @@ section{
     position: relative;
     text-align: left;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
@@ -1231,7 +1233,7 @@ section{
     content: "";
     position: absolute;
     left: 50%;
-    bottom: -23vw;
+    bottom: -24vw;
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
     width: 33.133vw;
@@ -1341,6 +1343,182 @@ section{
 .solutions_slide .swiper-slide:focus .ssb_link a,
 .solutions_slide .swiper-slide:hover .ssb_link a{
     background-color: var(--color2-);
+}
+
+/* history */
+
+.cardEffect{
+    height: 100vh;
+    overflow: hidden;
+    border-radius: 2.41vw 2.41vw 0 0;
+}
+
+#history{
+    background: url('../img/history_bg.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.card_tit{
+    position: relative;
+    padding-right: 10.241vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.card_tit.wh .main_cate{
+    color: #fff;
+    opacity: 0.7;
+}
+
+.card_tit.wh .sec_tit{
+    color: #fff;
+}
+
+.history_slideBox{
+    width: 100%;
+    margin-top: 4.819vw;
+}
+
+.history_slide{
+    width: 100%;
+}
+
+.history_slide .swiper-slide{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: auto;
+    width: max-content !important;
+    font-family: 'Pretendard', sans-serif;
+    padding-top: 2.108vw;
+}
+
+.hs_slideTop{
+    padding: 0 0 0.904vw 0.723vw;
+    margin-bottom: 0.904vw;
+    border-bottom: 1px solid #8a8a8a;
+}
+
+.hs_slideTop span{
+    position: relative;
+    display: inline-block;
+    font-size: 0.964vw;
+    line-height: 1.386vw;
+    padding: 0 0.843vw;
+    border-radius: 999px;
+    font-weight: 500;
+    color: #fff;
+    transition: all .3s ease;
+}
+
+.swiper-slide-active .hs_slideTop span{
+    background-color: #000;
+}
+
+.hs_slideTop span::after{
+    display: block;
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -1.18vw;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    width: 0.542vw;
+    height: 0.542vw;
+    border-radius: 50%;
+    background: #8a8a8a;
+    transition: all .3s ease;
+}
+
+.swiper-slide-active .hs_slideTop span::after{
+    background: #fff;
+}
+
+.additional_notice{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: calc((16.265vw * 2) + 30px);
+    text-align: center;
+}
+
+.additional_notice span{
+    display: inline-block;
+    font-size: 0.964vw;
+    line-height: 1.5vw;
+    letter-spacing: -0.01vw;
+    padding: 0 0.843vw;
+    background: var(--color1-);
+    border-radius: 999px;
+    font-weight: 500;
+}
+
+.hs_slideList{
+    padding-right: 30px;
+}
+
+.history_slide .swiper-slide:last-child .hs_slideList{
+    padding-right: 0;
+}
+
+.hs_slideList ul{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: flex-end;
+    justify-content: flex-start;
+    max-height: 24.096vw;
+    gap: 0 3.614vw;
+}
+
+.hs_slideList ul li{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 16.265vw;
+    min-height: 9.639vw;
+    border-radius: 0.602vw;
+    padding: 1.506vw 1.205vw;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.3);
+    transition: all .3s ease;
+    margin-bottom: 0.602vw;
+}
+
+.hs_slideList ul li:last-child{
+    margin-bottom: 0;
+}
+
+.swiper-slide-active .hs_slideList ul li{
+    background: #fff;
+}
+
+.hs_slideList ul li strong{
+    font-size: 1.446vw;
+    color: #fff;
+    transition: all .3s ease;
+    letter-spacing: -0.05vw;
+    font-weight: 500;
+    line-height: 1.25;
+}
+
+.swiper-slide-active .hs_slideList ul li strong{
+    color: #000;
+}
+
+.hs_slideList ul li p{
+    margin-top: 0.361vw;
+    font-size: 0.964vw;
+    color: #aaaaaa;
+    line-height: 1.3;
+    transition: all .3s ease;
+    font-weight: 300;
+}
+
+.swiper-slide-active .hs_slideList ul li p{
+    color: #000;
 }
 
 .modal_background{

@@ -194,6 +194,19 @@ $('.contact_confirm button').on('click', function(e){
 
     });
 
+        const swiper4 = new Swiper('.history_slide', {
+
+        direction: 'horizontal',
+        slidesPerView: 'auto',
+        speed: 300,
+
+        // pagination: {
+        //     el: '.solutions-pagination',
+        //     clickable: true,
+        // },
+
+    });
+
     window.addEventListener("resize", ScrollTrigger.update);
 
 });
