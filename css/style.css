@@ -1347,16 +1347,13 @@ section{
 
 /* history */
 
-.cardEffect{
-    height: 100vh;
-    overflow: hidden;
-    border-radius: 2.41vw 2.41vw 0 0;
-}
-
 #history{
     background: url('../img/history_bg.jpg') no-repeat;
     background-size: cover;
     background-position: center;
+    height: 100vh;
+    overflow: hidden;
+    border-radius: 2.41vw 2.41vw 0 0;
 }
 
 .card_tit{
@@ -1375,13 +1372,21 @@ section{
     color: #fff;
 }
 
+.card_tit .btn_type1{
+    position: absolute;
+    right: 0;
+    bottom: 0.602vw;
+}
+
 .history_slideBox{
+    position: relative;
     width: 100%;
-    margin-top: 4.819vw;
+    margin-top: 3.012vw;
 }
 
 .history_slide{
     width: 100%;
+    padding: 0 30.12vw;
 }
 
 .history_slide .swiper-slide{
@@ -1393,6 +1398,7 @@ section{
     width: max-content !important;
     font-family: 'Pretendard', sans-serif;
     padding-top: 2.108vw;
+    user-select: none;
 }
 
 .hs_slideTop{
@@ -1410,7 +1416,7 @@ section{
     border-radius: 999px;
     font-weight: 500;
     color: #fff;
-    transition: all .3s ease;
+    transition: all .4s ease;
 }
 
 .swiper-slide-active .hs_slideTop span{
@@ -1429,7 +1435,7 @@ section{
     height: 0.542vw;
     border-radius: 50%;
     background: #8a8a8a;
-    transition: all .3s ease;
+    transition: all .4s ease;
 }
 
 .swiper-slide-active .hs_slideTop span::after{
@@ -1467,8 +1473,6 @@ section{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    align-content: flex-end;
-    justify-content: flex-start;
     max-height: 24.096vw;
     gap: 0 3.614vw;
 }
@@ -1483,7 +1487,7 @@ section{
     padding: 1.506vw 1.205vw;
     overflow: hidden;
     background: rgba(0, 0, 0, 0.3);
-    transition: all .3s ease;
+    transition: all .4s ease;
     margin-bottom: 0.602vw;
 }
 
@@ -1498,7 +1502,7 @@ section{
 .hs_slideList ul li strong{
     font-size: 1.446vw;
     color: #fff;
-    transition: all .3s ease;
+    transition: all .4s ease;
     letter-spacing: -0.05vw;
     font-weight: 500;
     line-height: 1.25;
@@ -1513,12 +1517,158 @@ section{
     font-size: 0.964vw;
     color: #aaaaaa;
     line-height: 1.3;
-    transition: all .3s ease;
+    transition: all .4s ease;
     font-weight: 300;
 }
 
 .swiper-slide-active .hs_slideList ul li p{
     color: #000;
+}
+
+.hs_slideControl{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 0 1.807vw;
+    margin-top: 0.904vw;
+}
+
+.hs_slideBtn img{
+    height: 0.542vw;
+}
+
+/* news */
+
+#news{
+    position: relative;
+    overflow: hidden;
+    border-radius: 2.41vw 2.41vw 0 0;
+    padding: 6.587vw 13.554vw;
+    background: #fff;
+    z-index: 2;
+}
+
+.news_area{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.news_cont{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.news_cont.left{
+    width: 28.313vw;
+}
+
+.news_cont_tit{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-family: 'Pretendard', sans-serif;
+    gap: 0 0.843vw;
+    margin-bottom: 1.506vw;
+}
+
+.news_cont_cate{
+    display: inline-block;
+    font-size: 0.964vw;
+    color: #fff;
+    padding: 0 1.084vw;
+    line-height: 1.687vw;
+    background: #000;
+    font-weight: 500;
+    letter-spacing: -0.02vw;
+    border-radius: 999px;
+}
+
+.news_cont_tit h3{
+    font-size: 1.024vw;
+    font-weight: 500;
+    letter-spacing: -0.02vw;
+}
+
+.newsLetter_link{
+    width: 100%;
+}
+
+.newsLetter_link a{
+    display: block;
+    overflow: hidden;
+    border-radius: 0.602vw;
+}
+
+.newsLetter_link a img{
+    display: block;
+    width: 100%;
+}
+
+.news_cont.right{
+    width: 40.361vw;
+}
+
+.blog_list{
+    width: 100%;
+}
+
+.blog_list ul{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.blog_list ul li{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    transition: border .4s ease;
+}
+
+.blog_list ul li:hover{
+    border-color: #4bb6e9;
+}
+
+.blog_list ul li a{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.506vw 0.542vw 0.843vw 0.542vw;
+    font-family: 'Pretendard', sans-serif;
+}
+
+.blog_list ul li a p{
+    font-size: 1.024vw;
+    color: #000;
+    width: calc(100% - 6.024vw);
+    line-height: 1.2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.blog_list ul li:hover a p,
+.blog_list ul li:focus a p{
+    font-weight: 600;
+}
+
+.blog_list ul li a span{
+    font-size: 0.843vw;
+    color: #3a3a3a;
+    letter-spacing: -0.03vw;
+}
+
+/* locations */
+
+#locations{
+    position: relative;
+    height: 100vh;
+    z-index: 3;
+    background: #0c151a;
+    border-radius: 2.41vw 2.41vw 0 0;
 }
 
 .modal_background{

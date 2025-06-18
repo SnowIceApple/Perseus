@@ -200,11 +200,42 @@ $('.contact_confirm button').on('click', function(e){
         slidesPerView: 'auto',
         speed: 300,
 
-        // pagination: {
-        //     el: '.solutions-pagination',
-        //     clickable: true,
-        // },
+        navigation: {
+            nextEl: '.hs_slideBtn.next',
+            prevEl: '.hs_slideBtn.prev',
+        },
 
+        a11y: {
+            prevSlideMessage: '이전 슬라이드로 이동',
+            nextSlideMessage: '다음 슬라이드로 이동',
+        },
+
+    });
+
+    var cardItems = document.querySelectorAll('.cardEffect');
+
+    cardItems.forEach((cardItem, i) => {
+        ScrollTrigger.create({
+            trigger: cardItem,
+            start: "top top",
+            pin: true, 
+            scrub: 0.5,
+            pinSpacing: false,
+            onEnter: () => {
+                gsap.to(cardItem, {
+                    borderRadius: 0,
+                    duration: 1,
+                });
+            },
+            onLeaveBack: () => {
+                gsap.to(cardItem, {
+                    borderTopLeftRadius: '2.41vw',
+                    borderTopRightRadius: '2.41vw',
+                    duration: 1,
+                });
+            }
+
+        });
     });
 
     window.addEventListener("resize", ScrollTrigger.update);
