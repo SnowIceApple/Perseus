@@ -181,6 +181,19 @@ $('.contact_confirm button').on('click', function(e){
         $('.carSoftware_SlideTit ul li').eq(this.realIndex).addClass('active').siblings().removeClass('active');
     });
 
+        const swiper3 = new Swiper('.solutions_slide', {
+
+        direction: 'horizontal',
+        slidesPerView: 'auto',
+        speed: 500,
+
+        pagination: {
+            el: '.solutions-pagination',
+            clickable: true,
+        },
+
+    });
+
     window.addEventListener("resize", ScrollTrigger.update);
 
 });
