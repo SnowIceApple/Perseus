@@ -1383,7 +1383,7 @@ section{
     color: #fff;
 }
 
-.card_tit .btn_type1{
+#history .card_tit .btn_type1{
     position: absolute;
     right: 0;
     bottom: 0.602vw;
@@ -1741,10 +1741,17 @@ section{
 
 #locations{
     position: relative;
-    height: 100vh;
     z-index: 3;
     background: #0c151a;
     border-radius: 2.41vw 2.41vw 0 0;
+}
+
+#locations .card_tit{
+    position: absolute;
+    left: 6.587vw;
+    top: 5.988vw;
+    padding: 0;
+    width: max-content;
 }
 
 .modal_background{
@@ -1758,6 +1765,101 @@ section{
     opacity: 0;
     transition: all .4s ease;
     z-index: 10;
+}
+
+.globalMap_box{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.globalMap{
+    position: relative;
+    width: 72.892vw;
+}
+
+.globalMap_img{
+    width: 100%;
+}
+
+.globalMap_img img{
+    display: block;
+    width: 100%;
+}
+
+.global_location li{
+    position: absolute;
+    width: 2%;
+    height: 3.6%;
+}
+
+.global_location_list_inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.global_location li.de{
+    left: 9.6%;
+    top: 25.49%;
+}
+
+.global_location li.kr{
+    left: 39.75%;
+    top: 33.84%;
+}
+
+.global_location li.vn{
+    left: 32.77%;
+    top: 50.36%;
+}
+
+.location_pointer{
+    width: 100%;
+    height: 100%;
+    background: #ccc;
+    border-radius: 0.072vw;
+    transition: all .4s ease;
+}
+
+.global_location li:focus .location_pointer,
+.global_location li:hover .location_pointer{
+    background: #4bb6e9;
+}
+
+.location_desc{
+    position: absolute;
+    left: calc(100% + 0.723vw);
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Pretendard', sans-serif;
+}
+
+.location_desc a{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0.422vw 0.542vw;
+    border-radius: 999px;
+    background: #888;
+    transition: background .4s ease;
+}
+
+.global_location li:focus .location_desc a,
+.global_location li:hover .location_desc a{
+    background: #4bb6e9;
+}
+
+.location_name{
+    display: block;
+    line-height: 1.627vw;
+    padding: 0 0.843vw;
+    background: #fff;
+    color: #000;
+    border-radius: 999px;
+    font-size: 0.964vw;
+    font-weight: 600;
+    letter-spacing: -0.02vw;
 }
 
 .modal_background.active{
