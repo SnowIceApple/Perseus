@@ -51,13 +51,17 @@ section{
     background: #fff;
     transform-origin: top;
     transition: all .4s ease;
-    will-change: height;
+    will-change: height, top;
 }
 
 #header.active{
     height: 22.754vw;
     border-radius: 0 0 40px 40px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+#header.hide{
+    top: -5.689vw;
 }
 
 .header_inner{

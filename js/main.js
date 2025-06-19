@@ -8,6 +8,32 @@ $(document).ready(function(){
         $(this).removeClass('active');
     });
 
+    var lastScrollY = 0;
+    var main = document.querySelector('#main').offsetTop;
+
+    $(window).on('scroll', function(e){
+        const scrollY = window.pageYOffset;
+        const scrollUp = scrollY < lastScrollY;
+
+        if(scrollY == 0){
+            $('#header').removeClass('hide');
+        }
+
+        else if(scrollY >= main && scrollUp){
+            $('#header').removeClass('hide');
+        }
+
+        if(scrollY < main && scrollUp){
+            $('#header').removeClass('hide');
+        }
+
+        if(scrollY >= main && scrollUp == false){
+            $('#header').addClass('hide');
+        }
+
+        lastScrollY = scrollY;
+    });
+
     $('.lang_select button').on('click', function(){
         $('.lang_link').toggleClass('active');
         if($('.lang_link').hasClass('active')){
