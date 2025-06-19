@@ -28,7 +28,7 @@ $(document).ready(function(){
         }
 
         if(scrollY >= main && scrollUp == false){
-            $('#header').addClass('hide');
+            $('#header').addClass('hide').removeClass('active');
         }
 
         lastScrollY = scrollY;
