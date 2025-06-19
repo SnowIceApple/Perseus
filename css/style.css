@@ -1752,6 +1752,7 @@ section{
     top: 5.988vw;
     padding: 0;
     width: max-content;
+    z-index: 2;
 }
 
 .modal_background{
@@ -1765,6 +1766,58 @@ section{
     opacity: 0;
     transition: all .4s ease;
     z-index: 10;
+
+}
+
+.marquee_txt{
+    position: absolute;
+    left: 7.53vw;
+    top: 0;
+    overflow: hidden;
+    height: 100%;
+}
+
+.marquee_box{
+    white-space: nowrap;
+    animation: marqueeEffect 75s linear infinite;
+}
+
+@keyframes marqueeEffect {
+    0%{
+        transform: translateY(0);
+    }
+
+    100%{
+        transform: translateY(-100%);
+    }
+}
+
+.marquee_txt p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6.024vw;
+    white-space: nowrap;
+    writing-mode: vertical-rl;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgba(48, 56, 60, 0.5);
+    color: transparent;
+    font-weight: 300;
+    margin: 1.807vw 0;
+}
+
+.marquee_txt span{
+    display: block;
+}
+
+.marquee_deco{
+    width: 2.108vw;
+    margin: 1.205vw 0;
+    opacity: 0.3;
+}
+
+.marquee_deco img{
+    display: block;
 }
 
 .globalMap_box{
@@ -1822,6 +1875,7 @@ section{
     transition: all .4s ease;
 }
 
+.global_location li.active .location_pointer,
 .global_location li:focus .location_pointer,
 .global_location li:hover .location_pointer{
     background: #4bb6e9;
@@ -1829,25 +1883,30 @@ section{
 
 .location_desc{
     position: absolute;
-    left: calc(100% + 0.723vw);
+    left: calc(100%);
     top: 50%;
+    padding-left: 0.723vw;
     transform: translateY(-50%);
     font-family: 'Pretendard', sans-serif;
 }
 
 .location_desc a{
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
-    padding: 0.422vw 0.542vw;
+    padding: 0.422vw 0.602vw;
     border-radius: 999px;
     background: #888;
-    transition: background .4s ease;
+    transition: background 0.4s ease;
 }
 
+.global_location li.active .location_desc a,
 .global_location li:focus .location_desc a,
 .global_location li:hover .location_desc a{
     background: #4bb6e9;
+}
+
+.global_location li.active .location_desc a{
+    padding: 0.422vw 0.904vw 0.422vw 0.602vw;
 }
 
 .location_name{
@@ -1860,6 +1919,22 @@ section{
     font-size: 0.964vw;
     font-weight: 600;
     letter-spacing: -0.02vw;
+}
+
+.location_place{
+    display: block;
+    font-size: 0.964vw;
+    line-height: 1.627vw;
+    color: #000;
+    overflow: hidden;
+    max-width: 0;
+    white-space: nowrap;
+    transition: all .4s ease;
+}
+
+.global_location li.active .location_place{
+    max-width: 10.241vw;
+    margin-left: 0.542vw;
 }
 
 .modal_background.active{

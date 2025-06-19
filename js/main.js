@@ -284,7 +284,12 @@ $('.contact_confirm button').on('click', function(e){
     blogListA.addEventListener('mouseleave', function(e){
         newsCursor.classList.remove('active');
         newsCursor.classList.add('leave');
-    })
+    });
+
+    $('.location_desc a').on('click', function(e){
+        e.preventDefault();
+        $(this).closest('li').addClass('active').siblings().removeClass('active');
+    });
 
     window.addEventListener("resize", ScrollTrigger.update);
 
