@@ -29,6 +29,7 @@ $(document).ready(function(){
 
         if(scrollY >= main && scrollUp == false){
             $('#header').addClass('hide').removeClass('active');
+            $('.lang_link').removeClass('active').stop().slideUp(200);
         }
 
         lastScrollY = scrollY;
@@ -251,19 +252,41 @@ $('.contact_confirm button').on('click', function(e){
             onEnter: () => {
                 gsap.to(cardItem, {
                     borderRadius: 0,
-                    duration: 1,
+                    duration: 0.5,
                 });
             },
             onLeaveBack: () => {
                 gsap.to(cardItem, {
                     borderTopLeftRadius: '2.41vw',
                     borderTopRightRadius: '2.41vw',
-                    duration: 1,
+                    duration: 0.5,
                 });
             }
 
         });
     });
+
+    var newsCursor = document.getElementById('news_cursor');
+
+    document.addEventListener('mousemove', function(e){
+        var x = e.clientX;
+        var y = e.clientY;
+
+        newsCursor.style.left = x + 'px';
+        newsCursor.style.top = y + 'px';
+    });
+
+    var blogListA = document.querySelector('.blog_list');
+
+    blogListA.addEventListener('mouseenter', function(e){
+        newsCursor.classList.add('active');
+        newsCursor.classList.remove('leave');
+    });
+
+    blogListA.addEventListener('mouseleave', function(e){
+        newsCursor.classList.remove('active');
+        newsCursor.classList.add('leave');
+    })
 
     window.addEventListener("resize", ScrollTrigger.update);
 
