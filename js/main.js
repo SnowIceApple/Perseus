@@ -267,16 +267,14 @@ $('.contact_confirm button').on('click', function(e){
     });
 
     var newsCursor = document.getElementById('news_cursor');
+    var blogListA = document.querySelector('.blog_list');
 
-    document.addEventListener('mousemove', function(e){
+    blogListA.addEventListener('mousemove', function(e){
         var x = e.clientX;
         var y = e.clientY;
-
         newsCursor.style.left = x + 'px';
         newsCursor.style.top = y + 'px';
     });
-
-    var blogListA = document.querySelector('.blog_list');
 
     blogListA.addEventListener('mouseenter', function(e){
         newsCursor.classList.add('active');
