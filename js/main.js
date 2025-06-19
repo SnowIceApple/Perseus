@@ -221,6 +221,7 @@ $('.contact_confirm button').on('click', function(e){
             pin: true, 
             scrub: 0.5,
             pinSpacing: false,
+            invalidateOnRefresh: true,
             onEnter: () => {
                 gsap.to(cardItem, {
                     borderRadius: 0,
