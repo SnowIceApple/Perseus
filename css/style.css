@@ -10,10 +10,10 @@ body{
     overflow-x: hidden;
     -ms-overflow-style: none;
 }
-
+/* 
 ::-webkit-scrollbar{
     display: none;
-}
+} */
 
 :root{
     --color1-: #7dd5ff;
@@ -1461,6 +1461,10 @@ section{
     text-align: center;
 }
 
+.an2 .additional_notice{
+    display: none;
+}
+
 .additional_notice span{
     display: inline-block;
     font-size: 0.964vw;
@@ -1755,6 +1759,10 @@ section{
     z-index: 2;
 }
 
+#locations .card_tit .btn_type1{
+    margin-top: 1.807vw;
+}
+
 .modal_background{
     position: fixed;
     left: 0;
@@ -1776,6 +1784,12 @@ section{
     overflow: hidden;
     height: 100%;
     user-select: none;
+    transition: all .4s;
+}
+
+.mapActive .marquee_txt{
+    opacity: 0;
+    visibility: hidden;
 }
 
 .marquee_box{
@@ -1830,6 +1844,12 @@ section{
 .globalMap{
     position: relative;
     width: 72.892vw;
+    transition: all .6s ease;
+}
+
+.mapActive .globalMap{
+    transform: translateX(21vw);
+    -webkit-transform: translateX(21vw);
 }
 
 .globalMap_img{
@@ -1888,6 +1908,7 @@ section{
     top: 50%;
     padding-left: 0.723vw;
     transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
     font-family: 'Pretendard', sans-serif;
 }
 
@@ -1930,12 +1951,65 @@ section{
     overflow: hidden;
     max-width: 0;
     white-space: nowrap;
-    transition: all .4s ease-out;
+    transition: all .4s ease;
 }
 
 .global_location li.active .location_place{
     max-width: 10.241vw;
     margin-left: 0.542vw;
+}
+
+.globalLocation_slideBox{
+    position: absolute;
+    left: 6.587vw;
+    bottom: 9.6vw;
+    transform: translateX(-3.5vw);
+    -webkit-transform: translateX(-3.5vw);
+    width: 24.096vw;
+    border-radius: 0.602vw;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .6s ease;
+}
+
+.mapActive .globalLocation_slideBox{
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+}
+
+.globalLocation_slide{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.globalLocation_slide .swiper-slide{
+    height: auto !important;
+    margin-bottom: 1.807vw;
+}
+
+.globalLocation_slide .swiper_tit span{
+    display: block;
+    margin-bottom: 1.084vw;
+    font-size: 1.265vw;
+    color: #fff;
+    font-family: 'Pretendard', sans-serif;
+}
+
+.globalLocation_slide .swiper_img{
+    border-radius: 0.602vw;
+    overflow: hidden;
+}
+
+.globalLocation_slide .swiper_img img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 .modal_background.active{

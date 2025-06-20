@@ -112,7 +112,7 @@ $('.contact_confirm button').on('click', function(e){
         gsap.from(mainSplitTxt.chars, {
             delay: 0.5,
             opacity: 0,
-            y: 60,
+            y: 70,
             duration: 0.7,
             stagger: { amount: 0.3},
         });
@@ -289,6 +289,25 @@ $('.contact_confirm button').on('click', function(e){
     $('.location_desc a').on('click', function(e){
         e.preventDefault();
         $(this).closest('li').addClass('active').siblings().removeClass('active');
+        $('#locations').addClass('mapActive');
+    });
+
+    $('#locations').on('mouseup', function(e){
+        if($('.global_location li').has(e.target).length === 0 && !$('#locations .card_tit a.btn_type1').is(e.target) && !$('.globalLocation_slide').is(e.target)){
+            $('#locations').removeClass('mapActive');
+            $('.global_location li').removeClass('active');
+        }
+    });
+
+        const swiper5 = new Swiper('.globalLocation_slide', {
+
+        direction: 'vertical',
+        slidesPerView: 1,
+        autoHeight: true,
+        spaceBetween: 30,
+        speed: 300,
+        observer: true,
+        observeParents: true,
     });
 
     window.addEventListener("resize", ScrollTrigger.update);
