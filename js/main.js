@@ -293,21 +293,49 @@ $('.contact_confirm button').on('click', function(e){
     });
 
     $('#locations').on('mouseup', function(e){
-        if($('.global_location li').has(e.target).length === 0 && !$('#locations .card_tit a.btn_type1').is(e.target) && !$('.globalLocation_slide').is(e.target)){
+        if($('.global_location li').has(e.target).length === 0 && !$('#locations .card_tit a.btn_type1').is(e.target) && !$('.location-pagination .swiper-pagination-bullet').is(e.target)){
             $('#locations').removeClass('mapActive');
             $('.global_location li').removeClass('active');
         }
     });
 
-        const swiper5 = new Swiper('.globalLocation_slide', {
+    $('.globalLocation_slide .swiper-slide').on('click', function(){
+        $('#locations').removeClass('mapActive');
+        $('.global_location li').removeClass('active');
+    });
+
+    const swiper5 = new Swiper('.globalLocation_slide', {
 
         direction: 'vertical',
         slidesPerView: 1,
+        loop: true,
         autoHeight: true,
         spaceBetween: 30,
         speed: 300,
         observer: true,
         observeParents: true,
+        disableOnInteraction: false,
+
+        pagination: {
+            el: '.location-pagination',
+            clickable: true,
+        },
+
+        autoplay: {
+            delay: 2500,
+        }
+    });
+    
+    $('.global_location li.kr .location_desc a').on('click', function(){
+        swiper5.slideToLoop(0);
+    });
+
+    $('.global_location li.de .location_desc a').on('click', function(){
+        swiper5.slideToLoop(6);
+    });
+
+    $('.global_location li.vn .location_desc a').on('click', function(){
+        swiper5.slideToLoop(5);
     });
 
     window.addEventListener("resize", ScrollTrigger.update);
