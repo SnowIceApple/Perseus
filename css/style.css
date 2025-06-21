@@ -10,10 +10,10 @@ body{
     overflow-x: hidden;
     -ms-overflow-style: none;
 }
-/* 
+
 ::-webkit-scrollbar{
     display: none;
-} */
+}
 
 :root{
     --color1-: #7dd5ff;
