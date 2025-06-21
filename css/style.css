@@ -1389,15 +1389,22 @@ section{
     bottom: 0.602vw;
 }
 
+#history .card_tit{
+    margin-bottom: 3.012vw;
+}
+
 .history_slideBox{
     position: relative;
     width: 100%;
-    margin-top: 3.012vw;
-    padding: 0 30.12vw;
+    padding: 0 40vw 0 30.12vw;
 }
 
 .history_slide{
     width: 100%;
+}
+
+.swiper-wrapper{
+
 }
 
 .history_slide .swiper-slide{
@@ -1409,7 +1416,6 @@ section{
     height: auto;
     font-family: 'Pretendard', sans-serif;
     padding-top: 2.108vw;
-    user-select: none;
 }
 
 .hs_slideTop{
@@ -1831,7 +1837,13 @@ section{
 .globalMap{
     position: relative;
     width: 72.892vw;
-    transition: all .6s ease;
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    transition: transform .6s;
+    -webkit-trasition: transform .6s;
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }
 
 .mapActive .globalMap{
