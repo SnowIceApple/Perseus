@@ -1393,11 +1393,11 @@ section{
     position: relative;
     width: 100%;
     margin-top: 3.012vw;
+    padding: 0 15vw 0 30.12vw;
 }
 
 .history_slide{
     width: 100%;
-    padding: 0 30.12vw;
 }
 
 .history_slide .swiper-slide{
@@ -1405,8 +1405,8 @@ section{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    height: auto;
     width: max-content !important;
+    height: auto;
     font-family: 'Pretendard', sans-serif;
     padding-top: 2.108vw;
     user-select: none;
