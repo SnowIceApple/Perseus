@@ -1547,6 +1547,11 @@ section{
 }
 
 .hs_slideControl{
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
     width: 100%;
     display: flex;
     justify-content: center;
