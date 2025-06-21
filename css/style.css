@@ -1748,6 +1748,7 @@ section{
     z-index: 3;
     background: #0c151a;
     border-radius: 2.41vw 2.41vw 0 0;
+    overflow: hidden;
 }
 
 #locations .card_tit{
