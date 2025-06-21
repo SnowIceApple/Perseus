@@ -1952,7 +1952,6 @@ section{
     transform: translateX(-3.5vw);
     -webkit-transform: translateX(-3.5vw);
     width: 24.096vw;
-    overflow: hidden;
     opacity: 0;
     visibility: hidden;
     transition: all .6s ease;
@@ -1971,6 +1970,7 @@ section{
     position: relative;
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 
 .globalLocation_slide .swiper-slide{
@@ -1984,6 +1984,7 @@ section{
     font-size: 1.265vw;
     color: #fff;
     font-family: 'Pretendard', sans-serif;
+    line-height: 1.3;
 }
 
 .globalLocation_slide .swiper_img{
