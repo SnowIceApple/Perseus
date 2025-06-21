@@ -338,6 +338,12 @@ $('.contact_confirm button').on('click', function(e){
         swiper5.slideToLoop(5);
     });
 
+    $('.go_top button').on('click', function(){
+        $('html, body').animate({
+            scrollTop: 0,
+        }, 600);
+    });
+
     window.addEventListener("resize", ScrollTrigger.update);
 
 });
