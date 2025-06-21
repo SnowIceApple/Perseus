@@ -1957,6 +1957,7 @@ section{
     transition: all .6s ease;
     padding-right: 3vw;
     box-sizing: content-box;
+    overflow: hidden;
 }
 
 .mapActive .globalLocation_slideBox{
@@ -1970,7 +1971,6 @@ section{
     position: relative;
     width: 100%;
     height: 100%;
-    overflow: hidden;
 }
 
 .globalLocation_slide .swiper-slide{
@@ -2002,7 +2002,7 @@ section{
 
 .location-pagination{
     position: absolute;
-    left: calc(100% + 2vw) !important;
+    right: calc((-3vw) + 10px) !important;
 }
 
 .location-pagination .swiper-pagination-bullet-active{
