@@ -267,6 +267,7 @@ $('.contact_confirm button').on('click', function(e){
         });
     });
 
+
     var newsCursor = document.getElementById('news_cursor');
     var blogListA = document.querySelector('.blog_list');
 
@@ -344,6 +345,32 @@ $('.contact_confirm button').on('click', function(e){
             scrollTop: 0,
         }, 600);
     });
+
+    
+    function mapAniActive(){
+        $('.globalMap_box').addClass('active');
+    }
+
+    ScrollTrigger.create({
+        trigger: '.globalMap_img',
+        start: '40% bottom',
+        onEnter: () => {
+            mapAniActive();
+        }
+    });
+
+
+    $('#visualMap g').attr('class', 'active');
+
+        $('#visualMap g').each(function(){
+            var max = 12, min = 3;
+            var randomNum =  Math.floor(Math.random() * (max - min) + min);
+            var delay = randomNum / 10;
+
+            $(this).css({
+                'transition-delay': delay + 's',
+            });
+        }); 
 
     window.addEventListener("resize", ScrollTrigger.update);
 
