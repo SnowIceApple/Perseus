@@ -166,6 +166,7 @@ $('.contact_confirm button').on('click', function(e){
             start: 'top top',
             end: '150% top top',
             toggleActions: "play reverse none reverse",
+            invalidateOnRefresh: true,
         }
     });
 
@@ -174,15 +175,15 @@ $('.contact_confirm button').on('click', function(e){
         duration: 10,
     });
 
-    tl1.from('.carSoftware_tit', {
-        delay: -10,
-        y: 40,
-        opacity: 0,
-        duration: 1.5,
+    tl1.to('.carSoftware_tit', {
+        delay: -9,
+        yPercent: -70,
+        opacity: 1,
+        duration: 2,
     });
 
     tl1.from('.carSoftware_slideArea', {
-        delay: -8,
+        delay: -7,
         opacity: 0,
         duration: 3,
     });
