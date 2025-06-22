@@ -1,4 +1,4 @@
-# Perseus EN Clone coding(반응형 작업중)
+# Perseus EN 클론코딩(반응형 작업중)
 - 원본 링크: <http://www.cyberperseus.com/eng/index.php>
 - 클론코딩 링크: <https://snowiceapple.github.io/Perseus/>
 
