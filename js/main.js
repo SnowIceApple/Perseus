@@ -354,6 +354,7 @@ $('.contact_confirm button').on('click', function(e){
     ScrollTrigger.create({
         trigger: '.globalMap_img',
         start: '40% bottom',
+        invalidateOnRefresh: true,
         onEnter: () => {
             mapAniActive();
         }
