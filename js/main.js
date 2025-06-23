@@ -361,7 +361,6 @@ $('.contact_confirm button').on('click', function(e){
     });
 
 
-    $('#visualMap g').attr('class', 'active');
 
         $('#visualMap g').each(function(){
             var max = 12, min = 3;
