@@ -112,9 +112,9 @@ $('.contact_confirm button').on('click', function(e){
         gsap.from(mainSplitTxt.chars, {
             delay: 0.5,
             opacity: 0,
-            y: 70,
+            yPercent: 80,
             duration: 0.7,
-            stagger: { amount: 0.3},
+            stagger: { amount: 0.4},
         });
     }
 
@@ -212,21 +212,28 @@ $('.contact_confirm button').on('click', function(e){
         const swiper3 = new Swiper('.solutions_slide', {
 
         direction: 'horizontal',
-        slidesPerView: 'auto',
+        slidesPerView: 1,
         speed: 500,
+        spaceBetween: 30,
 
         pagination: {
             el: '.solutions-pagination',
             clickable: true,
         },
 
+        breakpoints: {
+            1280: {
+                slidesPerView: 'auto',
+            }
+        }
+
     });
 
         const swiper4 = new Swiper('.history_slide', {
 
-        direction: 'horizontal',
+        direction: 'vertical',
         slidesPerView: 'auto',
-        speed: 300,
+        autoHeight: true,
 
         navigation: {
             nextEl: '.hs_slideBtn.next',
@@ -236,6 +243,13 @@ $('.contact_confirm button').on('click', function(e){
         a11y: {
             prevSlideMessage: '이전 슬라이드로 이동',
             nextSlideMessage: '다음 슬라이드로 이동',
+        },
+
+        breakpoints: {
+            
+            1280: {
+                direction: 'horizontal',
+            }
         },
 
     });
@@ -372,6 +386,6 @@ $('.contact_confirm button').on('click', function(e){
             });
         }); 
 
-    window.addEventListener("resize", ScrollTrigger.update);
+    window.addEventListener("resize", ScrollTrigger.refresh());
 
 });
