@@ -12,6 +12,12 @@
 
 @media screen and (max-width: 1280px){
 
+    .btn_type1{
+        padding: 11px 45px 11px 11px;
+        font-size: 14px;
+        background-size: 20px auto !important;
+    }
+
     /* main */
 
     .main_slide_content{
@@ -238,6 +244,7 @@
 
     .main_cate{
         font-size: 14px;
+        margin-bottom: 10px;
     }
 
     .sec_tit{
@@ -355,6 +362,13 @@
 
     /* history */
 
+    #history .card_tit .btn_type1{
+        position: static;
+    }
+
+    #history .sec_tit{
+        margin-bottom: 25px;
+    }
 
     .history_slideBox{
         padding: 0;
@@ -373,7 +387,8 @@
     }
 
     .hs_slideTop {
-        padding: 0 15px 30px 0;
+        position: relative;
+        padding: 0px 15px 30px 0;
         margin-bottom: 0;
         margin-right: 14px;
         border-bottom: 0;
@@ -385,6 +400,17 @@
         font-size: 14px;
         line-height: 18px;
         padding: 0 11px;
+        z-index: 2;
+    }
+
+    .hs_slideTop span::after{
+        width: 11px;
+        height: 11px;
+        left: 74.5px;
+        bottom: 50%;
+        transform: translate(0, 50%);
+        -webkit-transform: translate(0, 50%);
+        z-index: 2;
     }
 
     .hs_slideList{
@@ -394,6 +420,11 @@
     .additional_notice{
         position: static;
         width: 225px;
+        margin-bottom: 10px;
+    }
+
+    .an2 .additional_notice{
+        display: block;
     }
 
     .additional_notice span{
@@ -427,6 +458,43 @@
     .news_cont.left,
     .news_cont.right{
         width: 100%;
+    }
+
+    .news_cont_cate{
+        font-size: 15px;
+        padding: 0 12px;
+        line-height: 22px;
+    }
+
+    .news_cont_tit{
+        margin-bottom: 20px;
+        gap: 0 15px;
+    }
+
+    .news_cont_tit h3{
+        font-size: 15px;
+    }
+
+    .news_cont.right{
+        margin-top: 25px;
+    }
+
+    .blog_list ul li:not(:first-child){
+        display: none;
+    }
+
+    .blog_list ul li a{
+        padding: 10px 0px 22px 0px;
+        gap: 20px 0;
+    }
+
+    .blog_list ul li a p{
+        font-size: 16px;
+        width: 100%;
+    }
+
+    .blog_list ul li a span{
+        font-size: 14px;
     }
 
 }
