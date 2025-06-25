@@ -45,7 +45,7 @@ $(document).ready(function(){
         }
     });
 
-    $('.header_contact_btn a').on('click', function(e){
+    $('.contact_modal_open a').on('click', function(e){
         e.preventDefault();
         $('.contact_area').toggleClass('active');
     })
@@ -104,6 +104,35 @@ $('.contact_confirm button').on('click', function(e){
         $('#Email').focus();
     }
 });
+
+    $('.mobileNav_open a').on('click', function(e){
+        e.preventDefault();
+        $('.mobileNav_area').toggleClass('active');
+        $('body').toggleClass('mobNav_show');
+    });
+
+    $(window).on('resize', function(){
+        if($(window).innerwidth() > 1280){
+            $('body').removeClass('mobNav_show');
+        }
+    });
+
+    $('.mobNav_floor1 > li:not(:last-child) > a').on('click', function(e){
+        var f2ParentF1 = $(this).closest('li');
+        e.preventDefault();
+        f2ParentF1.toggleClass('active').siblings().removeClass('active');
+        $(this).siblings('.mNav_flexCont').stop().slideDown(150);
+        f2ParentF1.siblings().children('.mNav_flexCont').stop().slideUp(150);
+        if(f2ParentF1.hasClass('active') == false){
+            $(this).siblings('.mNav_flexCont').stop().slideUp(150);
+        }
+    });
+
+    $('.mobileNav_contact_btn a').on('click', function(e){
+        e.preventDefault();
+        $('.mobileNav_area').removeClass('active');
+        $('body').removeClass('mobNav_show');
+    });
 
     function mainTxtToSplitTxt(){
         var mainTxt = document.querySelectorAll('.main_slide_content h2');

@@ -18,7 +18,49 @@
         background-size: 20px auto !important;
     }
 
+    /* header */
+
+    #header{
+        height: 55px;
+        overflow: visible;
+        padding: 0 20px;
+    }
+
+    #header.active{
+        height: 55px;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .header_inner{
+        height: 100%;
+    }
+
+    .logo a img{
+        width: 25px;
+    }
+
+    #nav{
+        display: none;
+    }
+
+    .header_util{
+        display: none;
+    }
+
+    .mobileNav_open{
+        display: block;
+    }
+
     /* main */
+
+    #main{
+        margin-top: 55px;
+    }
+
+    .main_inner{
+        padding: 0 20px;
+    }
 
     .main_slide_content{
         left: 20px;
@@ -46,6 +88,7 @@
     }
 
     .main-pagination{
+        width: auto !important;
         gap: 13px 0;
     }
 
