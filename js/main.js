@@ -27,7 +27,7 @@ $(document).ready(function(){
             $('#header').removeClass('hide');
         }
 
-        if(scrollY >= main && scrollUp == false){
+        if(scrollY >= main && scrollUp == false && $('.mobileNav_area').hasClass('active') == false){
             $('#header').addClass('hide').removeClass('active');
             $('.lang_link').removeClass('active').stop().slideUp(200);
         }

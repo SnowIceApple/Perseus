@@ -32,6 +32,10 @@
         box-shadow: none;
     }
 
+    #header.hide{
+        top: -55px;
+    }
+
     .header_inner{
         height: 100%;
     }
