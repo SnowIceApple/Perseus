@@ -112,7 +112,7 @@ $('.contact_confirm button').on('click', function(e){
     });
 
     $(window).on('resize', function(){
-        if($(window).innerwidth() > 1280){
+        if($(window).innerWidth() > 1280){
             $('body').removeClass('mobNav_show');
         }
     });
