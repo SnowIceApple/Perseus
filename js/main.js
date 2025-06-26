@@ -114,6 +114,7 @@ $('.contact_confirm button').on('click', function(e){
     $(window).on('resize', function(){
         if($(window).innerWidth() > 1280){
             $('body').removeClass('mobNav_show');
+            $('.mobileNav_area').removeClass('active');
         }
     });
 

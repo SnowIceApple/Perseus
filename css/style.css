@@ -506,9 +506,24 @@ section{
 }
 
 .mobileNav_open a .line{
+    position: relative;
     width: 100%;
     height: 2px;
     background: #000;
+    transform-origin: center;
+    transition: all .4s;
+}
+
+.mobNav_show .mobileNav_open a .line:first-of-type{
+    top: 4px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.mobNav_show .mobileNav_open a .line:last-of-type{
+    bottom: 2px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
 }
 
 .mobileNav_area{
@@ -542,6 +557,13 @@ section{
 .mobileNav_area.active .mobileNav_box{
     transform: translateY(0%);
     -webkit-transform: translateY(0%);
+}
+
+.mobileNav_logo{
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    width: 25px;
 }
 
 .mobileNav_top{
@@ -614,6 +636,20 @@ section{
     width: 100%;
     max-height: 100%;
     overflow: auto;
+}
+
+.mobNav_floor1 > li{
+    opacity: 0;
+    transform: translateX(80px);
+    -webkit-transform: translateX(80px);
+}
+
+.mobileNav_area.active .mobNav_floor1 > li{
+    opacity: 1;
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    transition: all .7s ease;
+    transition-delay: var(--delay-);
 }
 
 .mobNav_floor1 > li > a{

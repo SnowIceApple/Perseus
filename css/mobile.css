@@ -52,6 +52,51 @@
         display: block;
     }
 
+    /* contact */
+
+    .contact_box .main_cate{
+        font-size: 1.25rem;
+    }
+
+    .contact_area{
+        width: 51.875rem;
+        padding: 5.625rem 7.5rem 7.5rem 7.5rem;
+    }
+
+    .contact_area_top h2{
+        font-size: 5rem;
+    }
+
+    .contact_area_top p{
+        font-size: 1.25rem;
+        padding: 1.25rem 0 0 0;
+    }
+
+    .contact_form_inner legend{
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .contact_input_list label{
+        height: 1.5rem;
+    }
+
+    .contact_input_box ul li{
+        padding-top: 3.125rem;
+    }
+
+    .contact_input_list input{
+        height: 3.125rem;
+        font-size: 1.25rem;
+        padding: 0 1.25rem;
+    }
+
+    .contact_confirm button{
+        height: 5.625rem;
+        padding: 0 7.5rem;
+        font-size: 1.75rem;
+    }
+
     /* main */
 
     #main{
