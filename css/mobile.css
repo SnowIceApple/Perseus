@@ -733,6 +733,10 @@
         margin-left: 6px;
     }
 
+    .mobileLocation_list{
+        display: flex;
+    }
+
     .globalLocation_slideBox{
         width: auto;
         max-width: calc(100% - 40px);

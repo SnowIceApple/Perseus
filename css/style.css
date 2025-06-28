@@ -2240,7 +2240,7 @@ section{
     left: 0;
     top: calc(100% + 30px);
     width: max-content;
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 10px 0;
     transition: all .4s;
