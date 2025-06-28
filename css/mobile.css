@@ -12,6 +12,10 @@
 
 @media screen and (max-width: 1280px){
 
+    section{
+        padding: 40px 20px;
+    }
+
     .btn_type1{
         padding: 11px 45px 11px 11px;
         font-size: 14px;
@@ -149,6 +153,7 @@
 
     #Partners{
         background-position: 91% -20%;
+        padding: 140px 20px;
     }
 
     #Partners::before{
@@ -353,6 +358,10 @@
 
     /* challenges */
 
+    #challenges{
+        padding: 40px 20px;
+    }
+
     #challenges .section_inner{
         max-width: 730px;
         margin: 0 auto;
@@ -394,6 +403,10 @@
     }
 
     /* solutions */
+
+    #solutions{
+        padding: 40px 20px;
+    }
 
     #solutions .section_inner{
         max-width: 790px;
@@ -453,6 +466,10 @@
     }
 
     /* history */
+
+    #history{
+        padding: 40px 20px 50px 20px;
+    }
 
     #history .card_tit{
         padding-right: 0;
@@ -567,6 +584,8 @@
 
     #news{
         padding: 40px 20px 80px 20px;
+        height: 100vh;
+        overflow: hidden;
     }
 
     .news_cont.left,
@@ -577,7 +596,7 @@
     .news_cont_cate{
         font-size: 15px;
         padding: 0 12px;
-        line-height: 22px;
+        line-height: 24px;
     }
 
     .news_cont_tit{
@@ -593,10 +612,6 @@
         margin-top: 25px;
     }
 
-    .blog_list ul li:not(:first-child){
-        display: none;
-    }
-
     .blog_list ul li a{
         padding: 10px 0px 22px 0px;
         gap: 20px 0;
@@ -609,6 +624,133 @@
 
     .blog_list ul li a span{
         font-size: 14px;
+    }
+
+    /* global_loaction */
+
+    #locations{
+        padding: 80px 20px 21.875rem 20px;
+    }
+
+    #locations .section_inner{
+        max-width: 730px;
+        margin: 0 auto;
+    }
+
+    #locations .card_tit{
+        position: static;
+        margin-bottom: 40px;
+    }
+
+    .marquee_txt{
+        width: 100%;
+        left: 0;
+        top: calc(100% - 110px);
+        height: auto;
+        overflow: hidden;
+    }
+
+    .marquee_box{
+        display: flex;
+        width: max-content;
+        animation-duration: 40s;
+    }
+
+    .marquee_txt p{
+        font-size: 66px;
+        white-space: nowrap;
+        writing-mode: unset;
+        margin: 0 20px;
+    }
+
+    .marquee_deco{
+        width: 40px;
+        margin: 0 15px;
+    }
+
+    @keyframes marqueeEffect{
+        0%{
+            transform: translateX(0);
+            -webkit-transform: translateX(0);
+        }
+        100%{
+            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+        }
+    }
+
+    .globalMap_box{
+        position: relative;
+    }
+
+    .globalMap{
+        width: 100%;
+    }
+
+    .mapActive .globalMap{
+        transform: translate(0, -30%);
+        -webkit-transform: translate(0, -30%);
+    }
+
+    .globalMap_img{
+        opacity: 1;
+        transition: all .6s;
+    }
+    
+    .mapActive .globalMap_img{
+        opacity: 0;
+    }
+
+    .global_location{
+        transition: all .4s ease;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .mapActive .global_location{
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .location_name{
+        font-size: 10px;
+        line-height: 18px;
+        padding: 0 10px;
+        letter-spacing: 0px;
+    }
+
+    .location_desc a{
+        padding: 4px 5px;
+    }
+
+    .location_place{
+        font-size: 10px;
+        letter-spacing: 0px;
+    }
+
+    .global_location li.active .location_place{
+        max-width: 110px;
+        margin-left: 6px;
+    }
+
+    .globalLocation_slideBox{
+        width: auto;
+        max-width: calc(100% - 40px);
+        left: 50%;
+        bottom: 150px;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        transition: all .4s ease;
+    }
+
+    .mapActive .globalLocation_slideBox{
+        transform: translate(-50%, -100px);
+        -webkit-transform: translate(-50%, -100px);
+    }
+
+    .globalLocation_slide .swiper_tit span{
+        margin-bottom: 15px;
+        font-size: 16px;
     }
 
 }

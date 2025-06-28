@@ -334,14 +334,25 @@ $('.contact_confirm button').on('click', function(e){
 
     $('.location_desc a').on('click', function(e){
         e.preventDefault();
+        var idx = $(this).closest('li').index();
         $(this).closest('li').addClass('active').siblings().removeClass('active');
+        $('.mobileLocation_list li').eq(idx).addClass('active');
+        $('#locations').addClass('mapActive');
+    });
+
+    $('.mobileLocation_list li a').on('click', function(e){
+        e.preventDefault();
+        var idx = $(this).closest('li').index();
+        $(this).closest('li').addClass('active').siblings().removeClass('active');
+        $('.global_location li').eq(idx).addClass('active');
         $('#locations').addClass('mapActive');
     });
 
     $('#locations').on('mouseup', function(e){
-        if($('.global_location li').has(e.target).length === 0 && !$('#locations .card_tit a.btn_type1').is(e.target) && !$('.location-pagination .swiper-pagination-bullet').is(e.target)){
+        if($('.global_location li').has(e.target).length === 0 && !$('#locations .card_tit a.btn_type1').is(e.target) && !$('.location-pagination .swiper-pagination-bullet').is(e.target) && !$('.mobileLocation_list li a').is(e.target)){
             $('#locations').removeClass('mapActive');
             $('.global_location li').removeClass('active');
+            $('.mobileLocation_list li').removeClass('active');
         }
     });
 
@@ -372,15 +383,33 @@ $('.contact_confirm button').on('click', function(e){
         }
     });
     
-    $('.global_location li.kr .location_desc a').on('click', function(){
+    $('.global_location li.kr .location_desc a').on('click', function(e){
+        e.preventDefault();
         swiper5.slideToLoop(0);
     });
 
-    $('.global_location li.de .location_desc a').on('click', function(){
+    $('.mobileLocation_list li.kr').on('click', function(e){
+        e.preventDefault();
+        swiper5.slideToLoop(0);
+    });
+
+    $('.global_location li.de .location_desc a').on('click', function(e){
+        e.preventDefault();
         swiper5.slideToLoop(6);
     });
 
-    $('.global_location li.vn .location_desc a').on('click', function(){
+    $('.mobileLocation_list li.de').on('click', function(e){
+        e.preventDefault();
+        swiper5.slideToLoop(6);
+    });
+
+    $('.global_location li.vn .location_desc a').on('click', function(e){
+        e.preventDefault();
+        swiper5.slideToLoop(5);
+    });
+
+    $('.mobileLocation_list li.vn').on('click', function(e){
+        e.preventDefault();
         swiper5.slideToLoop(5);
     });
 
@@ -403,7 +432,6 @@ $('.contact_confirm button').on('click', function(e){
             mapAniActive();
         }
     });
-
 
 
         $('#visualMap g').each(function(){
