@@ -228,7 +228,9 @@
         position: relative;
         margin: 0 auto;
         z-index: 2;
-        top: 80%;
+        top: 60%;
+        width: 300px;
+        max-width: 100%;
     }
 
     .carSoftware_tit span{
@@ -738,13 +740,13 @@
     }
 
     .globalLocation_slideBox{
-        width: auto;
-        max-width: calc(100% - 40px);
+        width: max-content;
         left: 50%;
-        bottom: 150px;
+        bottom: 80px;
         transform: translateX(-50%);
         -webkit-transform: translateX(-50%);
         transition: all .4s ease;
+        padding-right: 25px;
     }
 
     .mapActive .globalLocation_slideBox{
@@ -755,6 +757,93 @@
     .globalLocation_slide .swiper_tit span{
         margin-bottom: 15px;
         font-size: 16px;
+    }
+
+    .globalLocation_slide .swiper_img{
+        border-radius: 10px;
+        width: 100%;
+    }
+
+    .location-pagination{
+        right: -25px !important;
+    }
+
+    /* footer */
+
+    #footer{
+        padding: 30px 20px 30px 20px;
+        background: #0c151a url('../img/footer_bg_m.png') no-repeat;
+        background-size: contain;
+        background-position: bottom -250px center;
+    }
+
+    .footer_box.left, .footer_box.right{
+        width: 100%;
+    }
+
+    .footer_box.left{
+        margin-bottom: 30px;
+    }
+
+    .footer_box.left strong{
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    .footer_box.left address{
+    }
+
+    .footer_box.left address p{
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+
+    .footer_box.left address p br{
+        display: none;
+    }
+
+    .footer_box.left address span{
+        font-size: 14px;
+        display: block;
+    }
+    
+    .footer_box.left address span:first-of-type{
+        margin-bottom: 8px;
+    }
+
+    .footer_link{
+        justify-content: flex-start;
+        margin-bottom: 8px;
+    }
+
+    .footer_link li a{
+        font-size: 14px;
+    }
+
+    .footer_box.right p{
+        font-size: 14px;
+    }
+
+    .footer_box.center{
+        position: static;
+        margin: 0 auto;
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        padding-top: 150px;
+    }
+
+    .footer_box.center .footer_logo{
+        width: 205px;
+        margin-bottom: 20px;
+    }
+
+    .go_top button{
+        padding: 11px 7px;
+    }
+
+    .go_top button span{
+        font-size: 14px;
     }
 
 }

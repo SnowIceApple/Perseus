@@ -2268,6 +2268,11 @@ section{
     width: 8px;
     height: 8px;
     background: #ccc;
+    transition: all .4s;
+}
+
+.mobileLocation_list li.active::before{
+    background: #4bb6e9;
 }
 
 .mobileLocation_list li a{
@@ -2369,9 +2374,6 @@ section{
     background: #fff;
 }
 
-
-
-
 /* footer */
 
 #footer{
@@ -2405,7 +2407,6 @@ section{
     font-size: 1.265vw;
     color: var(--color1-);
     font-weight: 500;
-    margin-bottom: 2.41vw;
 }
 
 .footer_box.left address{
