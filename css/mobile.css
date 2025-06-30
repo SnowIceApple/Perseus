@@ -116,7 +116,9 @@
     }
 
     .main_slide_content{
-        left: 20px;
+        padding: 0 20px;
+        left: 0;
+        max-width: 100%;        
     }
 
     .main_slide_content h2{
@@ -239,11 +241,16 @@
 
     .carSoftware_tit h2{
         font-size: 22px;
+        margin: 15px 0;
     }
 
     .carSoftware_tit span:last-of-type{
         font-size: 15px;
         line-height: 1.3;
+    }
+
+    .carSoftware_tit .btn_type1{
+        margin-top: 25px;
     }
 
     .carSoftware_SlideBox{
@@ -768,6 +775,10 @@
         right: -25px !important;
     }
 
+    #locations .card_tit .btn_type1{
+        margin-top: 25px;
+    }
+
     /* footer */
 
     #footer{
@@ -840,10 +851,93 @@
 
     .go_top button{
         padding: 11px 7px;
+        gap: 7px 0;
+    }
+
+    .go_top button img{
+        height: 13px;
     }
 
     .go_top button span{
         font-size: 14px;
     }
 
+
+}
+
+@media screen and (max-width: 768px){
+
+    /* main */
+
+    .main_swiper .swiper-slide{
+        border-radius: 20px;
+    }
+
+    .main_pagi_area h3{
+        font-size: 15px;
+    }
+
+    .main_page_box{
+        padding: 20px 0 20px 25px;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 220px;
+        height: 130px;
+        border-top-left-radius: 20px;
+    }
+
+    .main_page_box::before{
+        width: 46px;
+        height: 54px;
+    }
+
+    .main_page_box::after{
+        width: 46px;
+        height: 54px;
+    }
+
+    .main-pagination{
+        gap: 6px 0;
+        flex-wrap: wrap;
+        align-content: flex-end;
+    }
+    
+    .main-pagination .swiper-pagination-bullet{
+        width: max-content;
+        font-size: 14px;
+    }
+
+}
+
+@media screen and (max-width: 650px){
+
+    #locations{
+        padding: 80px 20px 20px 20px;
+        height: auto;
+    }
+
+    #locations .section_inner{
+        height: auto;
+    }
+
+
+    .globalLocation_slideBox{
+        position: relative;
+        max-width: calc(100% - 25px);
+        left: 0px;
+        bottom: 0;
+        transform: translate(0, 0);
+        -webkit-transform: translate(0, 0);
+        margin-top: 110px;
+    }
+
+    .globalLocation_slide .swiper-slide{
+        height: 100% !important;
+    }
+
+    .mapActive .globalLocation_slideBox{
+        transform: translate(0, -100px);
+        -webkit-transform: translate(0, -100px);
+    }
+    
 }

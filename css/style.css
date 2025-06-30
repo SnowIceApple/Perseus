@@ -1049,7 +1049,11 @@ section{
     font-family: "Pretendard", sans-serif;
     font-weight: 500;
     line-height: 1.22;
-    margin: 0.602vw 0 1.325vw 0;
+    margin: 0.602vw 0;
+}
+
+.carSoftware_tit .btn_type1{
+    margin-top: 1vw;
 }
 
 .car_area{
@@ -2336,7 +2340,6 @@ section{
 
 .globalLocation_slide .swiper-slide{
     height: auto !important;
-    margin-bottom: 1.807vw;
 }
 
 .globalLocation_slide .swiper_tit span{

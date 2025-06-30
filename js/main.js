@@ -364,7 +364,6 @@ $('.contact_confirm button').on('click', function(e){
     const swiper5 = new Swiper('.globalLocation_slide', {
 
         direction: 'vertical',
-        slidesPerView: 1,
         loop: true,
         autoHeight: true,
         spaceBetween: 30,
