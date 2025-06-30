@@ -365,8 +365,9 @@ $('.contact_confirm button').on('click', function(e){
 
         direction: 'vertical',
         loop: true,
-        autoHeight: true,
         spaceBetween: 30,
+        autoHeight: true,
+        slidesPerView: 'auto',
         speed: 300,
         observer: true,
         observeParents: true,

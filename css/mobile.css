@@ -629,6 +629,7 @@
     .blog_list ul li a p{
         font-size: 16px;
         width: 100%;
+        white-space: wrap;
     }
 
     .blog_list ul li a span{
@@ -920,6 +921,9 @@
         height: auto;
     }
 
+    .globalLocation_slide{
+        height: auto !important;
+    }
 
     .globalLocation_slideBox{
         position: relative;
@@ -932,7 +936,6 @@
     }
 
     .globalLocation_slide .swiper-slide{
-        height: 100% !important;
     }
 
     .mapActive .globalLocation_slideBox{
